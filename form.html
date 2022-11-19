@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Employee Payroll</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="EmployeePayRoll.js"></script>
+    <script src="Payrollform.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="profile.jpg" style="width: 12%;">
+                <div style="font-weight: 800; font-size: 20px">
+                    <span class="emptext">Employee</span><br>
+                    <span>Payroll</span>
+                </div>
+            </div>
+            <div><h1>Add Employee Payroll</h1></div>
+        </div>
+    </header>
+    <form class="form" action="#" onsubmit="save(); return false">
+        <label class="form-head">Employee Payroll Form</label>
+        <div class="row-content">
+            <label class="label text" for="name">Name</label>
+            <input class="input" type="text" id="name" name="name" placeholder="Your Name...">
+            <error-output class="text-error" for = "text"></error-output>
+        </div>
+        <div class="row-content">
+            <label class="label text" for="name">Profile Image</label>
+            <div class="profile_radio_content">
+                <label>
+                    <input type="radio" id="profie1" name="profile" value="img/1.jpg" required>
+                    <img class="profile" id="image1" src="profile.jpg">
+                </label>
+                <label>
+                    <input type="radio" id="profie2" name="profile" value="img/1.jpg" required>
+                    <img class="profile" id="image2" src="profile.jpg">
+                </label>
+                <label>
+                    <input type="radio" id="profie3" name="profile" value="img/1.jpg" required>
+                    <img class="profile" id="image3" src="profile.jpg">
+                </label>
+                <label>
+                    <input type="radio" id="profie4" name="profile" value="img/1.jpg" required>
+                    <img class="profile" id="image4" src="profile.jpg">
+                </label>
+            </div>
+        </div>
+        <div class="row-content">
+            <label class="label text" for="name">Gender</label>
+            <div>
+                <label>
+                    <input type="radio" id="Male" name="gender" value="Male">
+                    Male
+                </label>
+                <label>
+                    <input type="radio" id="Female" name="gender" value="Female">
+                    Female
+                </label>
+            </div>
+        </div>
+        <div class="row-content">
+            <label class="label text" for="name">Department</label>
+            <div class="profile_rodio_content">
+                <label>
+                    <input type="checkbox" id="HR" name="department" value="HR">
+                    HR
+                </label>
+                <label>
+                    <input type="checkbox" id="IT" name="department" value="IT">
+                    IT
+                </label>
+                <label>
+                    <input type="checkbox" id="Account" name="department" value="Account">
+                    Account
+                </label>
+                <label>
+                    <input type="checkbox" id="Other" name="department" value="Other">
+                    Other
+                </label>
+            </div>
+        </div>
+        <div class="row-content">
+            <label class="label text" for="name">Salary</label>
+            <!--input class="input" type="range" name="salary" id="salary" value="40000" min="30000" max="500000" oninput="this.nextElementSibling.value = this.value"-->
+            <input class="input" type="range" name="salary" id="salary" value="40000" min="30000" max="500000" step="100">
+            <output class="salary-output text" for="salary">40000</output>
+        </div>
+        <div class="row-content">
+            <label class="label text" for="startDate">Date</label>
+            <Select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+            </Select>
+            <Select>
+                <option value="Jan">January</option>
+                <option value="Feb">February</option>
+                <option value="Mar">March</option>
+                <option value="Apr">April</option>
+                <option value="May">May</option>
+                <option value="Jun">June</option>
+                <option value="Jul">July</option>
+                <option value="Aug">August</option>
+
+            </Select>
+            <Select id="year" name="Year">
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+            </Select>
+        <div class="row-content">
+            <label class="label text" for="name">Notes</label>
+            <textarea name="notes" id="notes"></textarea>
+        </div>
+        <div class="row-content">
+            <div>
+                <button type="btn">Cancle</button>
+            </div>
+            <div>
+                <button type="btn" type="submit">Submit</button>
+                <button type="btn">Reset</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
